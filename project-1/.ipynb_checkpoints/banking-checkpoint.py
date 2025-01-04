@@ -48,7 +48,7 @@ def depositMoney(account_no):
             print(f"Amount Deposit: ${amount}")
             print(f"Updated balance: ${accounts[account_no]['balance']}")
             # print(accounts[account_no]['balance'])
-            with open("transactionsPY.txt", "a") as f: # open in "a" mode to avoid overwriting
+            with open("transactions.txt", "a") as f: # open in "a" mode to avoid overwriting
                 # writing in the transaction file as per question requirement
                 f.write(f"Account No: {account_no}, Transaction: Deposit, Amount: ${amount}, New Balance: ${accounts[account_no]['balance']}\n")
         # to catch error

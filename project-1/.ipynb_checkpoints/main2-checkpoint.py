@@ -1,35 +1,30 @@
-
 from banking import *
-from rich.console import Console
-from rich.panel import Panel
-
-console = Console()
-
-def display_intro():
-    """Displays the introduction with professional formatting."""
-    intro_panel = Panel.fit(
-        """
-[bold yellow]Banking System[/bold yellow]
-[cyan]Submitted to:[/cyan] Sir Nasir Hussain
-
-[green]Created By:[/green]
-    [b]Muhammad Yaseen[/b] (334191)
-""",
-        title="[bold green]Welcome to the Banking System Program[/bold green]",
-        border_style="blue",
-    )
-    console.print(intro_panel)
+# from rich.console import Console
+# from rich.panel import Panel
 
 
-display_intro()
-helper = Panel.fit(
-        """
-    [bold yellow]This line ensures that the output of each iteration in the while loop appears above it,
-                            making it easier to read[/bold yellow]
-    """
-    )
+# def display_intro():
+#     """Displays the introduction with professional formatting."""
+#     intro_panel = Panel.fit(
+#         """
+# [bold yellow]Simulator[/bold yellow]
+# [cyan]Submitted to:[/cyan] Dr. Shaista Raees
+
+# [green]The group members are:[/green]
+# [b]Muhammad Azzam Hussain[/b] (B21110006068)
+# [b]Muhammad Huzaifa Abid[/b] (B21110006077)
+# [b]Muhammad Yaseen Azam[/b] (B21110006091)
+# [b]Muhammad Laraib[/b] (B21110006081)
+# [b]Syed Muhammad Own Hassan[/b] (B21110006134)
+# """,
+#         title="[bold green]Welcome to the Simulation Program[/bold green]",
+#         border_style="blue",
+#     )
+#     Console.print(intro_panel)
+
+
 while True:
-    console.print(helper)
+    # display_intro()
     print("Press 1 if you want to create account.")
     print("Press 2 if you want to deposit money in your account.")
     print("Press 3 if you want to withdraw money from your account.")
@@ -42,8 +37,7 @@ while True:
         if not name.isalpha():  #to check name only contain alphabets
             print("Invalid name. Only alphabets are allowed.")  
         else:
-            createAccount(name,accounts,current_id)
-            current_id += 1    
+            createAccount(name,accounts,current_id)    
     elif number == 2:
         account_no = input("Enter your account number: ")
         depositMoney(account_no)        
@@ -60,9 +54,3 @@ while True:
         break
     else:
         print("Invalid Choice")
-
-    choice = str(input("you want to do more operations? (yes/no): "))
-    if(choice.lower() == "no"):
-        break
-    else:
-        continue
