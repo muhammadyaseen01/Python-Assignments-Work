@@ -1,3 +1,5 @@
+## project-1 contain two projects, one for notebook and other is made of modules for testing
+
 # Banking System Project
 
 This project is a simple banking system where users can perform operations such as creating an account, depositing money, withdrawing money, checking balance, and printing transaction history. The project consists of two main files:
